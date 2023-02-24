@@ -1,0 +1,13 @@
+.SearchBar .choosen-ingred-parent {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+
+.SearchBar .choosen-ingred {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 20px;
+    font-weight: bold;
+}
