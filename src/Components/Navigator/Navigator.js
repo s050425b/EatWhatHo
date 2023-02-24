@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navigator.css";
 
 export function Navigator(){
     return (

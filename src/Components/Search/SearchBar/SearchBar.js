@@ -1,27 +1,30 @@
 import React from "react";
-import Spoonacular from "../../../Utils/Spoonacular";
 import "./SearchBar.css";
 
 export function SearchBar({
     handleAddIngred,
     ingredList,
     handleSearch,
-    setSearchText
+    handleRemoveIngred
 }) {
     const handleOnClick = () => {
         // Spoonacular.searchFoodByIngred();
         handleAddIngred(["apple", "orange", "banana"]);
     }
 
+    const handleRemove = (e) => {
+        handleRemoveIngred(e.target.parentNode.innerText.substring(0, e.target.parentNode.innerText.length - 1));
+    }
+
     return (
         <div className="SearchBar">
-            <div>
+            <div className="searchInput-parent">
                 <input type="text" />
                 <button onClick={handleOnClick}>Add</button>
             </div>
             <div className="choosen-ingred-parent">
                 {ingredList.map(ingred=> {
-                    return (<div className="choosen-ingred">{ingred}</div>);
+                    return (<div className="choosen-ingred">{ingred}<span className="removeBtn" onClick={handleRemove} >x</span></div>);
                 })}
             </div>
             <button onClick={handleSearch}>Search</button>

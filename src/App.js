@@ -7,11 +7,17 @@ import { MealDetailPage } from './Pages/MealDetailPage/MealDetailPage';
 function App() {
   return (
     <Router>
-      <Navigator />
-      <Routes>
-        <Route path="/" element={<SearchMealByIngred />} />
-        <Route path="/meal" element={<MealDetailPage />} />
-      </Routes>
+      <div className="App">
+        <Navigator />
+        <div className="bodyDiv">
+          <Routes>
+            <Route path="/" element={<SearchMealByIngred />} />
+            <Route path="/meal" element={<MealDetailPage />} />
+          </Routes>
+        </div>
+
+      </div>
+
     </Router>
   );
 }

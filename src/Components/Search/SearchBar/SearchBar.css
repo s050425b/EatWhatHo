@@ -11,3 +11,44 @@
     margin: 10px 20px;
     font-weight: bold;
 }
+
+.SearchBar .removeBtn {
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.SearchBar .removeBtn:hover {
+    color: red;
+}
+
+.SearchBar .searchInput-parent input {
+    height: 30px;
+    width: 300px;
+    font-size: 1.1rem;
+    margin-right: 20px;
+
+}
+
+.SearchBar .searchInput-parent button {
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px 20px;
+    text-align: center;
+    width: fit-content;
+    background-color: rgb(149, 255, 220);
+    font-weight: bold;
+    cursor: pointer;;
+}
+
+.SearchBar .searchInput-parent button:hover {
+    background-color: rgb(32, 202, 145);
+}
+
+.SearchBar .searchInput-parent {
+    border: 1px solid red;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}

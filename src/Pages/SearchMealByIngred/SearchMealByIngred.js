@@ -15,6 +15,15 @@ export function SearchMealByIngred() {
         });
     }
 
+    const handleRemoveIngred = (ingred) => {
+        setIngredList(prev => {
+            return prev.filter(element => {
+                
+                return element !== ingred;
+            });
+        });
+    }
+
     const handleSearch = async () => {
         setSearchResult(await Spoonacular.searchFoodByIngred(ingredList));
         setDisplayIndex(0);
@@ -36,7 +45,8 @@ export function SearchMealByIngred() {
 
     return (
         <div className="SearchResturant">
-            <SearchBar handleAddIngred={handleAddIngred} ingredList={ingredList} handleSearch={handleSearch} />
+            <h1>Search Meal By Ingredients</h1>
+                <SearchBar handleAddIngred={handleAddIngred} ingredList={ingredList} handleSearch={handleSearch} handleRemoveIngred={handleRemoveIngred} />
             <SearchResult searchResult={searchResult} displayIndex={displayIndex} handleForward={handleForward} handleBackward={handleBackward} />
         </div>
     );
