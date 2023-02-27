@@ -19,7 +19,9 @@ export function SearchResult({
     }
 
     if (searchResult.length <= 0) {
-        return (<div className="SearchResult"></div>);
+        return (<div className="SearchResult">
+            <h2>Search Result</h2>
+        </div>);
     }
     return (
         <div className="SearchResult">

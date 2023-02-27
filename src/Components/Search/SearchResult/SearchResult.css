@@ -1,3 +1,7 @@
+.SearchResult {
+    min-height: 30vh;
+}
+
 .SearchResult .resultSet{
     display: flex;
     align-items: center;
