@@ -33,7 +33,7 @@ export function MealDetail({
                 <h2>Meal Details: </h2>
                 <h2 className="dishName">{name}</h2>
                 <div className="img-div">
-                    <img src={image} />
+                    <img src={image} alt="meal photo"/>
                 </div>
                 <div className="dishTypes-parent">
                     {jmxArr2}

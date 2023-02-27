@@ -27,7 +27,7 @@ export function SearchResult({
             <div className="resultSet">
                 <button onClick={handleForward}>Forward</button>
                 <div className="resultCardHolder" onClick={handleChoose}>
-                    <img src={searchResult[displayIndex].image} />
+                    <img src={searchResult[displayIndex].image} alt="meal photo"/>
                     <span>{searchResult[displayIndex].name}</span>
                 </div>
                 <button onClick={handleBackward}>Backward</button>

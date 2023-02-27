@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { SearchBar } from "../../Components/Search/SearchBar/SearchBar";
 import { SearchResult } from "../../Components/Search/SearchResult/SearchResult";
 import Spoonacular from "../../Utils/Spoonacular";
