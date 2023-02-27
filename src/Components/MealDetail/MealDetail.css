@@ -3,16 +3,25 @@
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+    background-color: white;
+}
+
+.MealDetail > div {
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .MealDetail .dishName {
     font-size: 2rem;
-    color:rgb(37, 72, 0);
+    color: rgb(37, 72, 0);
 }
 
 .MealDetail .dishTypes-parent {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .MealDetail .dishTypes {
@@ -31,8 +40,10 @@
 
 .MealDetail .left-div {
     border-right: 2px solid black;
-    height: 100%;
+    display: grid;
+    grid-row-gap: 20px;
 }
+
 
 .MealDetail .img-div {
     display: flex;
@@ -41,7 +52,7 @@
     align-items: center;
 }
 
-.MealDetail .img-div img{
+.MealDetail .img-div img {
     width: 70%;
 }
 
@@ -66,7 +77,6 @@
 }
 
 .MealDetail .right-div {
-    padding: 40px;
     display: flex;
     flex-direction: column;
 }

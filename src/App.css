@@ -9,9 +9,10 @@
 }
 
 .bodyDiv {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
     box-sizing: border-box;
     padding: 20px 40px;
+    background-image: url("../image/natural-wooden-background.jpg");
 }
 
 a {
@@ -24,7 +25,7 @@ a:hover {
 }
 
 .btn {
-    background-color: greenyellow;
+    background-color: rgb(205, 255, 131);
     font-weight: bold;
     border-radius: 50px !important;
     width:fit-content;

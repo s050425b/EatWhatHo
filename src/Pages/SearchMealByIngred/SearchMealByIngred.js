@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SearchBar } from "../../Components/Search/SearchBar/SearchBar";
 import { SearchResult } from "../../Components/Search/SearchResult/SearchResult";
+import { SelectItemList } from "../../Components/Search/SelectItemList/SeletItemList";
 import Spoonacular from "../../Utils/Spoonacular";
 import "./SearchMealByIngred.css";
 
@@ -19,7 +20,7 @@ export function SearchMealByIngred() {
     const handleRemoveIngred = (ingred) => {
         setIngredList(prev => {
             return prev.filter(element => {
-                
+
                 return element !== ingred;
             });
         });
@@ -42,13 +43,16 @@ export function SearchMealByIngred() {
         });
     }
 
-    
+
 
     return (
         <div className="SearchMealByIngred hideScrollBar">
-            <h1>Search Meal By Ingredients</h1>
-                <SearchBar handleAddIngred={handleAddIngred} ingredList={ingredList} handleSearch={handleSearch} handleRemoveIngred={handleRemoveIngred} />
-                <SearchResult searchResult={searchResult} displayIndex={displayIndex} handleForward={handleForward} handleBackward={handleBackward} />
+            <div className="search-panel">
+                <h1>Search Meal By Ingredients</h1>
+                <SearchBar handleAddIngred={handleAddIngred} handleSearch={handleSearch}/>
+            </div>
+            <SelectItemList ingredList={ingredList} handleRemoveIngred={handleRemoveIngred} />
+            <SearchResult searchResult={searchResult} displayIndex={displayIndex} handleForward={handleForward} handleBackward={handleBackward} />
         </div>
     );
 }

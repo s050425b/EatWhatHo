@@ -1,0 +1,23 @@
+.choosen-ingred-parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.choosen-ingred-parent .choosen-ingred {
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 60px;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+.choosen-ingred-parent .removeBtn {
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.choosen-ingred-parent .removeBtn:hover {
+    color: red;
+}

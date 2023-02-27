@@ -16,7 +16,7 @@ export function MealDetail({
     for (let i = 0; i < ingredArr.length; i++) {
         jmxArr.push(
             <div className="ingredient">
-                <p><span className="ingredient-index font-green">{i+1}.</span>{ingredArr[i].measures.us.amount}<span> {ingredArr[i].measures.us.unitShort}</span><span> {ingredArr[i].name}</span></p>
+                <p><span className="ingredient-index font-green">{i + 1}.</span>{ingredArr[i].measures.us.amount}<span> {ingredArr[i].measures.us.unitShort}</span><span> {ingredArr[i].name}</span></p>
             </div>
         );
     }
@@ -33,17 +33,19 @@ export function MealDetail({
                 <h2>Meal Details: </h2>
                 <h2 className="dishName">{name}</h2>
                 <div className="img-div">
-                    <img alt="meal photo" src={image} />
+                    <img alt="meal" src={image} />
                 </div>
                 <div className="dishTypes-parent">
                     {jmxArr2}
                 </div>
-                <p><span className="labelSpan font-green">Meal ID: </span>{id}</p>
-                <p><span className="labelSpan font-green">Name: </span>{name}</p>
-                <p><span className="labelSpan font-green">Duration: </span>{duration}</p>
-                <p><span className="labelSpan font-green">Health Score: </span>{healthScore}</p>
-                <p className="labelSpan font-green">Source: </p>
-                <a href={source} target="_blank">{source}</a>
+                <div>
+                    <p><span className="labelSpan font-green">Meal ID: </span>{id}</p>
+                    <p><span className="labelSpan font-green">Name: </span>{name}</p>
+                    <p><span className="labelSpan font-green">Duration: </span>{duration}</p>
+                    <p><span className="labelSpan font-green">Health Score: </span>{healthScore}</p>
+                    <p className="labelSpan font-green">Source: </p>
+                    <a href={source} target="_blank">{source}</a>
+                </div>
                 <div>
                     <h2>Ingredients: </h2>
                     <div className="ingreds-parent">
@@ -55,10 +57,10 @@ export function MealDetail({
 
             <div className="right-div hideScrollBar">
                 <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/t9Pbd89lOZs" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
+                    <iframe width="525" height="310" src="https://www.youtube.com/embed/t9Pbd89lOZs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
 
                 <div>
