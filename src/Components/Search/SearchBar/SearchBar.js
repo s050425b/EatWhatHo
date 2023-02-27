@@ -27,7 +27,7 @@ export function SearchBar({
                     return (<div className="choosen-ingred">{ingred}<span className="removeBtn" onClick={handleRemove} >x</span></div>);
                 })}
             </div>
-            <button onClick={handleSearch}>Search</button>
+            <div onClick={handleSearch} className="btn searchBtn">Search</div>
         </div>
     );
 }

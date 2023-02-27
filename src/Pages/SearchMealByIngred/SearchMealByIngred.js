@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { SearchBar } from "../../Components/Search/SearchBar/SearchBar";
 import { SearchResult } from "../../Components/Search/SearchResult/SearchResult";
 import Spoonacular from "../../Utils/Spoonacular";
+import "./SearchMealByIngred.css";
 
 export function SearchMealByIngred() {
     const [ingredList, setIngredList] = useState([]);
@@ -44,10 +45,10 @@ export function SearchMealByIngred() {
     
 
     return (
-        <div className="SearchResturant">
+        <div className="SearchMealByIngred hideScrollBar">
             <h1>Search Meal By Ingredients</h1>
                 <SearchBar handleAddIngred={handleAddIngred} ingredList={ingredList} handleSearch={handleSearch} handleRemoveIngred={handleRemoveIngred} />
-            <SearchResult searchResult={searchResult} displayIndex={displayIndex} handleForward={handleForward} handleBackward={handleBackward} />
+                <SearchResult searchResult={searchResult} displayIndex={displayIndex} handleForward={handleForward} handleBackward={handleBackward} />
         </div>
     );
 }

@@ -1,12 +1,10 @@
 .SearchResult .resultSet{
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .SearchResult .resultCardHolder{
-    border: 1px solid red;
     display: inline-block;
     cursor: pointer;
 }
@@ -19,7 +17,6 @@
 
 .SearchResult .resultCardHolder span{
     font-weight: bold;
-    border: 1px solid black;
     display: block;
     width: 350px;
     text-align: center;

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useLocation } from "react-router-dom";
 import Spoonacular from "../../Utils/Spoonacular";
 import { MealDetail } from "../../Components/MealDetail/MealDetail";
+import "./MealDetailPage.css";
 
 export function MealDetailPage() {
     const { state } = useLocation();
@@ -28,11 +29,11 @@ export function MealDetailPage() {
 
     if (!state) {
         return (
-        <div className="MealDetail">No search result</div>
+        <div className="MealDetailPage">No search result</div>
         );
     } else if (!mealObj) {
         return (
-            <div className="MealDetail">Loading</div>
+            <div className="MealDetailPage">Loading</div>
         );
     }
 

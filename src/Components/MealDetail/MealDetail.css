@@ -1,7 +1,13 @@
 .MealDetail {
     display: grid;
+    height: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
+}
+
+.MealDetail .dishName {
+    font-size: 2rem;
+    color:rgb(37, 72, 0);
 }
 
 .MealDetail .dishTypes-parent {
@@ -10,31 +16,37 @@
 }
 
 .MealDetail .dishTypes {
-    border: 1px solid grey;
-    padding: 10px;
+    border: 2px solid rgb(195, 220, 156);
+    padding: 5px 10px;
     border-radius: 15px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin: 5px 10px;
+    cursor: pointer;
+    color: rgb(98, 138, 38);
+}
+
+.MealDetail .dishTypes:hover {
+    font-weight: bold;
 }
 
 .MealDetail .left-div {
     border-right: 2px solid black;
+    height: 100%;
 }
 
-.MealDetail .right-div {
+.MealDetail .img-div {
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
 
-.MealDetail .right-div img{
-    width: 80%;
+.MealDetail .img-div img{
+    width: 70%;
 }
 
 .MealDetail .labelSpan {
     font-weight: 600;
-    color:rgb(130, 36, 36)
 }
 
 .MealDetail .ingreds-parent {
@@ -43,8 +55,18 @@
 }
 
 .MealDetail .ingredient {
-    border-right: 2px solid grey;
     padding: 0px 10px;
     margin-bottom: 20px;
 
+}
+
+.MealDetail .ingredient-index {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.MealDetail .right-div {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
 }

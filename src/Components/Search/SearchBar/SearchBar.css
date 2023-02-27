@@ -1,13 +1,13 @@
 .SearchBar .choosen-ingred-parent {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid red;
+    border-top: 2px solid greenyellow;
 }
 
 .SearchBar .choosen-ingred {
-    border: 1px solid black;
-    padding: 20px;
-    border-radius: 20px;
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 60px;
     margin: 10px 20px;
     font-weight: bold;
 }
@@ -47,8 +47,13 @@
 }
 
 .SearchBar .searchInput-parent {
-    border: 1px solid red;
     display: block;
     width: fit-content;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.SearchBar .searchBtn {
     margin: 0 auto;
+    margin-top: 30px;
 }
