@@ -1,14 +1,14 @@
 .Navigator {
     /* border-bottom: 2px solid greenyellow; */
     display: flex;
-    justify-content:  space-between;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     height: 50px;
     padding: 10px 35px;
-    -webkit-box-shadow: 0px 1px 1px 0px rgb(216, 162, 74);
-    -moz-box-shadow: 0px 1px 1px 0px rgb(216, 162, 74);
-    box-shadow: 0px 1px 1px 0px rgb(216, 162, 74);
+    -webkit-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.6);
     color: rgb(123, 94, 48);
     font-weight: bold;
 }

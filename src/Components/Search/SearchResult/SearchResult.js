@@ -20,12 +20,12 @@ export function SearchResult({
 
     if (searchResult.length <= 0) {
         return (<div className="SearchResult">
-            <h2>Search Result</h2>
+            <h2>Search Result:</h2>
         </div>);
     }
     return (
         <div className="SearchResult">
-            <h2>Search Result</h2>
+            <h2>Search Result:</h2>
             <div className="resultSet">
                 <button onClick={handleForward}>Forward</button>
                 <div className="resultCardHolder" onClick={handleChoose}>

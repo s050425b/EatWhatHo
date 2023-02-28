@@ -12,6 +12,7 @@ export function SelectItemList({
 
     return (
         <div>
+            <h2>Choosen Ingredients:</h2>
             <div className="choosen-ingred-parent">
                 {ingredList.map(ingred => {
                     return (<div className="choosen-ingred">{ingred}<span className="removeBtn" onClick={handleRemove} >x</span></div>);

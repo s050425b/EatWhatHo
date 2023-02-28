@@ -1,6 +1,8 @@
 .choosen-ingred-parent {
     display: flex;
     flex-wrap: wrap;
+    align-content: start;
+    min-height: 200px;
 }
 
 .choosen-ingred-parent .choosen-ingred {

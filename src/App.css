@@ -24,18 +24,19 @@ a:hover {
 }
 
 .btn {
-    background-color: rgb(205, 255, 131);
+    background-color: rgb(226, 96, 9);
     font-weight: bold;
     border-radius: 50px !important;
     width:fit-content;
     padding: 10px 20px;
     cursor: pointer;
     margin-left: 10px;
+    color: white;
     border-radius: 7%;
 }
 
 .btn:hover {
-    color: rgb(143, 175, 105);
+    background-color: rgb(143, 175, 105);
 }
 
 .hideScrollBar {
