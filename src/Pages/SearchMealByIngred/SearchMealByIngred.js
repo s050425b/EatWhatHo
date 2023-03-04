@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { SearchBar } from "../../Components/Search/SearchBar/SearchBar";
 import { SearchResult } from "../../Components/Search/SearchResult/SearchResult";
 import { SelectItemList } from "../../Components/Search/SelectItemList/SeletItemList";
+import { loadFalse, loadTrue } from "../../Global_state/Loading/LoadingSlice";
 import Spoonacular from "../../Utils/Spoonacular";
 import "./SearchMealByIngred.css";
 
 export function SearchMealByIngred() {
+    const dispatch = useDispatch();
     const [ingredList, setIngredList] = useState([]);
     const [searchResult, setSearchResult] = useState([]);
     const [displayIndex, setDisplayIndex] = useState(0);
@@ -27,8 +30,10 @@ export function SearchMealByIngred() {
     }
 
     const handleSearch = async () => {
+        dispatch(loadTrue());
         setSearchResult(await Spoonacular.searchFoodByIngred(ingredList));
         setDisplayIndex(0);
+        dispatch(loadFalse());
     }
 
     const handleForward = () => {
@@ -42,8 +47,6 @@ export function SearchMealByIngred() {
             return (prev + 1) < searchResult.length ? (prev + 1) : (searchResult.length - 1);
         });
     }
-
-
 
     return (
         <div className="SearchMealByIngred hideScrollBar">

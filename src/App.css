@@ -3,6 +3,14 @@
     overflow-y: hidden;
 }
 
+.pageLogo {
+    font-size: 1.25rem;
+}
+
+.pageLogo > .pageLogo-mid {
+    color: rgb(226, 96, 9);
+}
+
 .font-green {
     color:rgb(24, 97, 6);
 }

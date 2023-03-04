@@ -3,13 +3,17 @@ import { useLocation } from "react-router-dom";
 import Spoonacular from "../../Utils/Spoonacular";
 import { MealDetail } from "../../Components/MealDetail/MealDetail";
 import "./MealDetailPage.css";
+import { useDispatch } from "react-redux";
+import { loadFalse, loadTrue } from "../../Global_state/Loading/LoadingSlice";
 
 export function MealDetailPage() {
+    const dispatch = useDispatch();
     const { state } = useLocation();
     const [mealObj, setMealObj] = useState();
 
     useEffect( () => {
         async function fetchMealObj() {
+            dispatch(loadTrue());
             let returnObj =  await Spoonacular.searchMealDetail(state.id);
         
             console.log(returnObj);
@@ -23,6 +27,7 @@ export function MealDetailPage() {
                 ingredArr: returnObj.extendedIngredients,
                 dishTypes: returnObj.dishTypes
             });
+            dispatch(loadFalse());
         }
         fetchMealObj();
     }, []);
