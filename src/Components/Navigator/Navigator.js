@@ -15,7 +15,7 @@ export function Navigator(){
             <div className="page-parent">
                 <div className="nav-btn">Page1</div>
                 <div className="nav-btn">Page2</div>
-                <div className="nav-btn"><NavLink to="/savedMeal">My Library</NavLink></div>
+                <NavLink to="/savedMeal"><div className="nav-btn">My Library</div></NavLink>
             </div>
             <div className="btn" onClick={goBack}>Back</div>
         </div>
