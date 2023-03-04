@@ -6,6 +6,7 @@ import { MealDetailPage } from './Pages/MealDetailPage/MealDetailPage';
 import { Loading } from './Components/Loading/Loading';
 import { useSelector } from 'react-redux';
 import { selectIsLoading } from './Global_state/Loading/LoadingSelector';
+import { SavedMealPage } from './Pages/SavedMealPage/SavedMealPage';
 
 function App() {
   const isLoading = useSelector(selectIsLoading);
@@ -18,6 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<SearchMealByIngred />} />
               <Route path="/meal" element={<MealDetailPage />} />
+              <Route path="/savedMeal" element={<SavedMealPage />} />
             </Routes>
           </div>
           <Loading isLoading={isLoading}/>
