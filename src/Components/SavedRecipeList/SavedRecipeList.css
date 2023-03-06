@@ -1,0 +1,18 @@
+.SavedRecipeList .SavedRecipeList-child {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 20px 5%;
+    line-height: 40px;
+    border-bottom: 2px solid grey;
+    cursor: pointer;
+}
+
+.SavedRecipeList .SavedRecipeList-child:hover {
+    background-color: aliceblue;
+} 
+
+.SavedRecipeList .SavedRecipeList-child img {
+   width: 200px;
+}

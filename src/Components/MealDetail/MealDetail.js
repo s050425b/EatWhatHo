@@ -16,7 +16,8 @@ export function MealDetail({
     for (let i = 0; i < ingredArr.length; i++) {
         jmxArr.push(
             <div className="ingredient">
-                <p><span className="ingredient-index font-green">{i + 1}.</span>{ingredArr[i].measures.us.amount}<span> {ingredArr[i].measures.us.unitShort}</span><span> {ingredArr[i].name}</span></p>
+                {/* <p><span className="ingredient-index font-green">{i + 1}.</span>{ingredArr[i].measures.us.amount}<span> {ingredArr[i].measures.us.unitShort}</span><span> {ingredArr[i].name}</span></p> */}
+                <p><span className="ingredient-index font-green">{i + 1}. {ingredArr[i]}</span></p>
             </div>
         );
     }
@@ -39,11 +40,11 @@ export function MealDetail({
                     {jmxArr2}
                 </div>
                 <div>
-                    <p><span className="labelSpan font-green">Meal ID: </span>{id}</p>
-                    <p><span className="labelSpan font-green">Name: </span>{name}</p>
-                    <p><span className="labelSpan font-green">Duration: </span>{duration}</p>
-                    <p><span className="labelSpan font-green">Health Score: </span>{healthScore}</p>
-                    <p className="labelSpan font-green">Source: </p>
+                    <p className="info-row"><span className="labelSpan font-green">Meal ID: </span>{id}</p>
+                    <p className="info-row"><span className="labelSpan font-green">Name: </span>{name}</p>
+                    <p className="info-row"><span className="labelSpan font-green">Duration: </span>{duration}</p>
+                    <p className="info-row"><span className="labelSpan font-green">Health Score: </span>{healthScore}</p>
+                    <p className="info-row labelSpan font-green">Source: </p>
                     <a href={source} target="_blank">{source}</a>
                 </div>
                 <div>
@@ -63,19 +64,19 @@ export function MealDetail({
                         allowfullscreen></iframe>
                 </div>
 
-                <div>
+                <div className="recipe-step">
                     <h3>Step 1</h3>
                     <p>Place chicken breasts into the slow cooker; pour in 3/4 of the wing sauce and ranch dressing mix.</p>
                 </div>
-                <div>
+                <div className="recipe-step">
                     <h3>Step 2</h3>
                     <p>Cover and cook on Low for 6 to 7 hours.</p>
                 </div>
-                <div>
+                <div className="recipe-step">
                     <h3>Step 3</h3>
                     <p>Shred chicken in the cooker with two forks. Stir in butter.</p>
                 </div>
-                <div>
+                <div className="recipe-step">
                     <h3>Step 4</h3>
                     <p>Pile shredded chicken and sauce onto hoagie rolls. Serve with remaining Buffalo sauce.</p>
                 </div>

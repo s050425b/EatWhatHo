@@ -17,7 +17,7 @@ export function Navigator(){
                 <div className="nav-btn">Page2</div>
                 <NavLink to="/savedMeal"><div className="nav-btn">My Library</div></NavLink>
             </div>
-            <div className="btn" onClick={goBack}>Back</div>
+            <div className="backBtn btn" onClick={goBack}>Back</div>
         </div>
     );
 }

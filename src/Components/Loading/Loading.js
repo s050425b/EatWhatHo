@@ -8,6 +8,7 @@ export function Loading({
     return (
         <div style={{visibility: isLoading? "visible": "hidden"}}className="Loading">
             <img style={{animationIterationCount: isLoading? "infinite" : "1"}} src={logo} />
+            <p style={{animationIterationCount: isLoading? "infinite" : "1"}}>Loading</p>
         </div>
     );
 

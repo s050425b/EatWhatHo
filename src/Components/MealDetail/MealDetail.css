@@ -6,12 +6,12 @@
     background-color: white;
 }
 
-.MealDetail > div {
+.MealDetail>div {
     height: 85vh;
     padding: 30px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .MealDetail .dishName {
@@ -57,6 +57,10 @@
     width: 70%;
 }
 
+.MealDetail .info-row {
+    margin-bottom: 30px;
+}
+
 .MealDetail .labelSpan {
     font-weight: 600;
 }
@@ -80,4 +84,41 @@
 .MealDetail .right-div {
     display: flex;
     flex-direction: column;
+}
+
+.MealDetail .recipe-step {
+    margin: 30px;
+}
+
+.MealDetail iframe {
+    width: 90%;
+}
+
+@media only screen and (max-width: 990px) {
+    .MealDetail {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .MealDetail>div {
+        height: auto;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-bottom: 1px solid black;
+    }
+
+    .MealDetail>.left-div {
+        border-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .MealDetail>div {
+        padding: 15px;
+    }
+
+    .MealDetail iframe {
+        height: 200px;
+    }
 }

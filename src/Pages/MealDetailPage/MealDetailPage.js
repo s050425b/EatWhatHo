@@ -15,18 +15,7 @@ export function MealDetailPage() {
         async function fetchMealObj() {
             dispatch(loadTrue());
             let returnObj =  await Spoonacular.searchMealDetail(state.id);
-        
-            console.log(returnObj);
-
-            setMealObj({
-                name: returnObj.title,
-                duration: returnObj.cookingMinutes,
-                image: returnObj.image,
-                source: returnObj.sourceUrl,
-                healthScore: returnObj.healthScore,
-                ingredArr: returnObj.extendedIngredients,
-                dishTypes: returnObj.dishTypes
-            });
+            setMealObj(returnObj);
             dispatch(loadFalse());
         }
         fetchMealObj();
@@ -44,7 +33,7 @@ export function MealDetailPage() {
 
     return (
         <div className="MealDetailPage">
-            <MealDetail id={state.id} name={mealObj.name} duration={mealObj.duration} image={mealObj.image} source={mealObj.source} healthScore={mealObj.healthScore} ingredArr={mealObj.ingredArr} dishTypes={mealObj.dishTypes} />
+            <MealDetail id={state.id} name={mealObj.title} duration={mealObj.cookingMinutes} image={mealObj.image} source={mealObj.sourceUrl} healthScore={mealObj.healthScore} ingredArr={mealObj.ingredients} dishTypes={mealObj.dishTypes} />
         </div>
     );
 }

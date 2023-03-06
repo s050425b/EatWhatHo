@@ -3,16 +3,45 @@
     overflow-y: hidden;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 40px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 30px;
+}
+
+.pageContainer {
+    display: block;
+    box-sizing: border-box;
+    min-height: 85vh;
+    background-color: rgb(255, 255, 255);
+    /* -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .pageLogo {
     font-size: 1.25rem;
 }
 
-.pageLogo > .pageLogo-mid {
+.pageLogo>.pageLogo-mid {
     color: rgb(226, 96, 9);
 }
 
 .font-green {
-    color:rgb(24, 97, 6);
+    color: rgb(24, 97, 6);
 }
 
 .bodyDiv {
@@ -23,19 +52,19 @@
 }
 
 a {
-    color:black;
+    color: black;
     font-weight: 600;
 }
 
 a:hover {
-    color:rgb(93, 202, 166);
+    color: rgb(93, 202, 166);
 }
 
 .btn {
     background-color: rgb(226, 96, 9);
     font-weight: bold;
     border-radius: 50px !important;
-    width:fit-content;
+    width: fit-content;
     padding: 10px 20px;
     cursor: pointer;
     margin-left: 10px;
@@ -49,10 +78,20 @@ a:hover {
 
 .hideScrollBar {
     overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hideScrollBar::-webkit-scrollbar {
     display: none;
-  }
+}
+
+
+@media only screen and (max-width: 630px) {
+    html {
+        font-size: 12px;
+    }
+}

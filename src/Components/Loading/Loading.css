@@ -11,7 +11,7 @@
     z-index: 10;
 }
 
-.Loading > img {
+.Loading > img, .Loading > p {
     width: 100%;
     animation: rotateLogo 1.5s infinite;
 }
