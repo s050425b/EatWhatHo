@@ -1,3 +1,7 @@
+.SearchBar {
+    width: 100%;
+}
+
 .SearchBar .removeBtn {
     position: relative;
     bottom: 15px;
@@ -11,10 +15,9 @@
 
 .SearchBar .searchInput-parent input {
     height: 30px;
-    width: 300px;
+    width: 60%;
     font-size: 1.1rem;
     margin-right: 20px;
-
 }
 
 .SearchBar .searchInput-parent button {
@@ -30,7 +33,7 @@
 
 .SearchBar .searchInput-parent {
     display: block;
-    width: fit-content;
+    width: 50%;
     margin: 10px auto;
     margin-bottom: 20px;
 }
