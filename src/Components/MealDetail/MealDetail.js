@@ -9,7 +9,8 @@ export function MealDetail({
     source,
     healthScore,
     ingredArr,
-    dishTypes
+    dishTypes,
+    onClickSave
 }) {
     let jmxArr = [];
     let jmxArr2 = [];
@@ -32,7 +33,7 @@ export function MealDetail({
         <div className="MealDetail">
             <div className="left-div hideScrollBar">
                 <h2>Meal Details: </h2>
-                <h2 className="dishName">{name}</h2>
+                <h2 className="dishName">{name}<button onClick={onClickSave}>Save</button></h2>
                 <div className="img-div">
                     <img alt="meal" src={image} />
                 </div>

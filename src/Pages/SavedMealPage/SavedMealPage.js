@@ -16,7 +16,7 @@ export function SavedMealPage() {
     useEffect(() => {
         dispatch(loadTrue());
         async function searchMeal() {
-            setRecipeInfoArr(await Spoonacular.searchMealDetailByIDArr(["122987", "527097"]));
+            setRecipeInfoArr(await Spoonacular.searchMealDetailByIDArr(savedRecipeArr));
             dispatch(loadFalse());
         }
         searchMeal();

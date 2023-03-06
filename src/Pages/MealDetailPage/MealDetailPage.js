@@ -5,12 +5,13 @@ import { MealDetail } from "../../Components/MealDetail/MealDetail";
 import "./MealDetailPage.css";
 import { useDispatch } from "react-redux";
 import { loadFalse, loadTrue } from "../../Global_state/Loading/LoadingSlice";
+import { addRecipe } from "../../Global_state/SavedRecipe/SavedRecipeSlice";
 
 export function MealDetailPage() {
     const dispatch = useDispatch();
     const { state } = useLocation();
     const [mealObj, setMealObj] = useState();
-
+    
     useEffect( () => {
         async function fetchMealObj() {
             dispatch(loadTrue());
@@ -31,9 +32,24 @@ export function MealDetailPage() {
         );
     }
 
+    function onClickSave() {
+        console.log("save!");
+        dispatch(addRecipe(mealObj.id));
+    }
+
     return (
         <div className="MealDetailPage">
-            <MealDetail id={state.id} name={mealObj.title} duration={mealObj.cookingMinutes} image={mealObj.image} source={mealObj.sourceUrl} healthScore={mealObj.healthScore} ingredArr={mealObj.ingredients} dishTypes={mealObj.dishTypes} />
+            <MealDetail 
+                id={state.id} 
+                name={mealObj.title} 
+                duration={mealObj.cookingMinutes} 
+                image={mealObj.image} 
+                source={mealObj.sourceUrl} 
+                healthScore={mealObj.healthScore} 
+                ingredArr={mealObj.ingredients} 
+                dishTypes={mealObj.dishTypes} 
+                onClickSave={onClickSave}
+                />
         </div>
     );
 }
