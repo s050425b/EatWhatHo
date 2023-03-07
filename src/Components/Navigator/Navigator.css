@@ -17,19 +17,15 @@
     display: inline-block;
 }
 
-.Navigator .back-btn {
-    background-color: greenyellow;
-    font-weight: bold;
-    border-radius: 50px !important;
-}
 
 .Navigator .nav-btn {
+    color: rgb(123, 94, 48);
     padding: 10px 20px;
     cursor: pointer;
     margin-left: 10px;
 }
 
-.Navigator .nav-btn:hover {
+.Navigator .nav-btn:hover,.Navigator .active  {
     color: rgb(143, 175, 105);
     font-weight: bold;
     border-bottom: 2px solid rgb(143, 175, 105);

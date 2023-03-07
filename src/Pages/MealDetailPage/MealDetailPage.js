@@ -1,28 +1,30 @@
 import React, {useEffect, useState} from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Spoonacular from "../../Utils/Spoonacular";
 import { MealDetail } from "../../Components/MealDetail/MealDetail";
 import "./MealDetailPage.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loadFalse, loadTrue } from "../../Global_state/Loading/LoadingSlice";
-import { addRecipe } from "../../Global_state/SavedRecipe/SavedRecipeSlice";
+import { addRecipe, removeRecipe } from "../../Global_state/SavedRecipe/SavedRecipeSlice";
+import { isRecipeSaved } from "../../Global_state/SavedRecipe/SavedRecipeSelector";
 
 export function MealDetailPage() {
     const dispatch = useDispatch();
-    const { state } = useLocation();
+    const { id } = useParams();
     const [mealObj, setMealObj] = useState();
-    
+    const isSaved = useSelector(isRecipeSaved(id));
+
     useEffect( () => {
         async function fetchMealObj() {
             dispatch(loadTrue());
-            let returnObj =  await Spoonacular.searchMealDetail(state.id);
+            let returnObj =  await Spoonacular.searchMealDetail(id);
             setMealObj(returnObj);
             dispatch(loadFalse());
         }
         fetchMealObj();
     }, []);
 
-    if (!state) {
+    if (!id) {
         return (
         <div className="MealDetailPage">No search result</div>
         );
@@ -33,14 +35,18 @@ export function MealDetailPage() {
     }
 
     function onClickSave() {
-        console.log("save!");
-        dispatch(addRecipe(mealObj.id));
+        if (isSaved) {
+            dispatch(removeRecipe(mealObj.id));
+        } else {
+            dispatch(addRecipe(mealObj.id));
+        }
+        
     }
 
     return (
         <div className="MealDetailPage">
             <MealDetail 
-                id={state.id} 
+                id={id} 
                 name={mealObj.title} 
                 duration={mealObj.cookingMinutes} 
                 image={mealObj.image} 
@@ -49,6 +55,7 @@ export function MealDetailPage() {
                 ingredArr={mealObj.ingredients} 
                 dishTypes={mealObj.dishTypes} 
                 onClickSave={onClickSave}
+                isSaved={isSaved}
                 />
         </div>
     );

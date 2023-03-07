@@ -18,7 +18,7 @@ function App() {
           <div className="bodyDiv">
             <Routes>
               <Route path="/" element={<SearchMealByIngred />} />
-              <Route path="/meal" element={<MealDetailPage />} />
+              <Route path="/meal/:id" element={<MealDetailPage />} />
               <Route path="/savedMeal" element={<SavedMealPage />} />
             </Routes>
           </div>

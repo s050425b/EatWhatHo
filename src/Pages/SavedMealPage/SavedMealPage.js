@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { selectSavedRecipe } from "../../Global_state/SavedRecipe/SavedRecipeSelector";
 import { SavedRecipeList } from "../../Components/SavedRecipeList/SavedRecipeList";
 import "./SavedMealPage.css";
 import Spoonacular from "../../Utils/Spoonacular";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
 import { loadTrue, loadFalse } from "../../Global_state/Loading/LoadingSlice";
+import { useNavigate } from "react-router-dom";
 
 export function SavedMealPage() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const savedRecipeArr = useSelector(selectSavedRecipe);
     const [recipeInfoArr, setRecipeInfoArr] = useState([]);
 
@@ -22,9 +22,13 @@ export function SavedMealPage() {
         searchMeal();
     }, []);
 
+    function handleRecipeClick(id) {
+        navigate("/meal/" + id);
+    }
+
     return (
         <div className="SavedMealPage pageContainer">
-            <SavedRecipeList savedList={recipeInfoArr} />
+            <SavedRecipeList savedList={recipeInfoArr} handleRecipeClick={handleRecipeClick}/>
         </div>
     );
 }

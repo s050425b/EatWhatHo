@@ -11,11 +11,7 @@ export function SearchResult({
     const navigate = useNavigate();
 
     const handleChoose = () => {
-        navigate("/meal", {
-            state: {
-                id: searchResult[displayIndex].id
-            }
-        });
+        navigate("/meal/"+ searchResult[displayIndex].id);
     }
 
     if (searchResult.length <= 0) {

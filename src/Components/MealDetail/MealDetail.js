@@ -1,5 +1,6 @@
 import React from "react";
 import './MealDetail.css';
+import { unfilledHeart, filledHeart } from "../../image/heart_svg";
 
 export function MealDetail({
     id,
@@ -10,7 +11,8 @@ export function MealDetail({
     healthScore,
     ingredArr,
     dishTypes,
-    onClickSave
+    onClickSave,
+    isSaved
 }) {
     let jmxArr = [];
     let jmxArr2 = [];
@@ -33,7 +35,7 @@ export function MealDetail({
         <div className="MealDetail">
             <div className="left-div hideScrollBar">
                 <h2>Meal Details: </h2>
-                <h2 className="dishName">{name}<button onClick={onClickSave}>Save</button></h2>
+                <h2 className="dishName">{name} <div className="heartIcon" onClick={onClickSave}> {isSaved ? filledHeart : unfilledHeart} </div></h2>
                 <div className="img-div">
                     <img alt="meal" src={image} />
                 </div>

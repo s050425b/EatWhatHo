@@ -94,6 +94,11 @@
     width: 90%;
 }
 
+.MealDetail .heartIcon {
+    display: inline-block;
+    width:30px;
+}
+
 @media only screen and (max-width: 990px) {
     .MealDetail {
         grid-template-columns: 1fr;
