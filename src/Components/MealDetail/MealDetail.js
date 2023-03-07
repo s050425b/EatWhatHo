@@ -11,6 +11,7 @@ export function MealDetail({
     healthScore,
     ingredArr,
     dishTypes,
+    rating,
     onClickSave,
     isSaved
 }) {
@@ -36,6 +37,7 @@ export function MealDetail({
             <div className="left-div hideScrollBar">
                 <h2>Meal Details: </h2>
                 <h2 className="dishName">{name} <div className="heartIcon" onClick={onClickSave}> {isSaved ? filledHeart : unfilledHeart} </div></h2>
+                <p>Rating: {rating}</p>
                 <div className="img-div">
                     <img alt="meal" src={image} />
                 </div>

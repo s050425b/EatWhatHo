@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Spoonacular from "../../Utils/Spoonacular";
 import { MealDetail } from "../../Components/MealDetail/MealDetail";
 import "./MealDetailPage.css";
@@ -7,9 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadFalse, loadTrue } from "../../Global_state/Loading/LoadingSlice";
 import { addRecipe, removeRecipe } from "../../Global_state/SavedRecipe/SavedRecipeSlice";
 import { isRecipeSaved } from "../../Global_state/SavedRecipe/SavedRecipeSelector";
+import { RecipeComment } from "../../Components/RecipeComment/RecipeComment";
 
 export function MealDetailPage() {
     const dispatch = useDispatch();
+    const {pathname} = useLocation();
     const { id } = useParams();
     const [mealObj, setMealObj] = useState();
     const isSaved = useSelector(isRecipeSaved(id));
@@ -23,6 +25,7 @@ export function MealDetailPage() {
         }
         fetchMealObj();
     }, []);
+
 
     if (!id) {
         return (
@@ -45,7 +48,11 @@ export function MealDetailPage() {
 
     return (
         <div className="MealDetailPage">
-            <MealDetail 
+            <Link to={`/meal/${id}`} className={pathname.includes("comment")? "PageBtn" : "PageBtn active"}>Recipe</Link>
+            <Link to={`/meal/${id}/comment`} className={pathname.includes("comment")? "PageBtn active" : "PageBtn"}>Comment</Link>
+            {
+                !pathname.includes("comment")? 
+                <MealDetail 
                 id={id} 
                 name={mealObj.title} 
                 duration={mealObj.cookingMinutes} 
@@ -54,9 +61,12 @@ export function MealDetailPage() {
                 healthScore={mealObj.healthScore} 
                 ingredArr={mealObj.ingredients} 
                 dishTypes={mealObj.dishTypes} 
+                rating={mealObj.rating} 
                 onClickSave={onClickSave}
                 isSaved={isSaved}
-                />
+                /> :
+                <RecipeComment />
+            }
         </div>
     );
 }

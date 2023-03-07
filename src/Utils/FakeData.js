@@ -7,7 +7,8 @@ export const recipes = [
         cookingMinutes: 10,
         healthScore: 10,
         dishTypes: ["side dish", "health"],
-        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275"
+        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275",
+        rating: 4.2
     },
     {
         id: "527097",
@@ -17,7 +18,8 @@ export const recipes = [
         cookingMinutes: 5,
         healthScore: 10,
         dishTypes: ["side dish", "health"],
-        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275"
+        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275",
+        rating: 4.8
     },
     {
         id: "628885",
@@ -27,7 +29,8 @@ export const recipes = [
         cookingMinutes: 15,
         healthScore: 10,
         dishTypes: ["side dish", "health"],
-        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275"
+        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275",
+        rating: 3.8
     },
     {
         id: "377600",
@@ -37,6 +40,7 @@ export const recipes = [
         cookingMinutes: 30,
         healthScore: 10,
         dishTypes: ["side dish", "health"],
-        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275"
+        sourceUrl: "http://www.food.com/recipe/refreshing-fresh-fruit-salad-108275",
+        rating: 4.5
     }
 ]

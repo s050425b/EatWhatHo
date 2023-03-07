@@ -6,7 +6,7 @@ export function SavedRecipeList({
     handleRecipeClick
 }) {
     function handleClick(e) {
-        const searchId = e.target.firstChild.firstChild.lastChild.innerText;
+        const searchId = e.currentTarget.firstChild.firstChild.lastChild.innerText;
         handleRecipeClick(searchId);
     }
 

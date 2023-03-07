@@ -3,3 +3,31 @@
     background-image: url("../../image/natural-wooden-background.jpg");
     border-radius: 10px;
 }
+
+.MealDetailPage .PageBtn{
+    display:inline-block;
+    background-color: white;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+}
+
+.MealDetailPage .PageBtn:hover {
+    background-color: antiquewhite;
+}
+
+.MealDetailPage .active {
+    background-color: antiquewhite;
+}
+
+
+@media only screen and (max-width: 370px) {
+    .MealDetailPage .PageBtn{
+        width: 70px;
+    }
+}

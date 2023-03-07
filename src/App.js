@@ -19,6 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<SearchMealByIngred />} />
               <Route path="/meal/:id" element={<MealDetailPage />} />
+              <Route path="/meal/:id/comment" element={<MealDetailPage />} />
               <Route path="/savedMeal" element={<SavedMealPage />} />
             </Routes>
           </div>
